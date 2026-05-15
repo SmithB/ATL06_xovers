@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ATL06_xovers"
+description = "code for manupulating ATL06 crossover files"
+keywords = [
+    "ICESat-2",
+    "ATL06"
+]
+authors = [
+    {name = "Ben Smith", email = "besmith@uw.edu"}
+]
+maintainers = [
+    {name = "ATL06 team"}
+]
+
+license = {file = "LICENSE"}
+readme = "README.md"
+version = "0.0.1"
+
+requires-python = ">=3.6"
+dependencies = [
+    "h5py",
+    "matplotlib",
+    "numpy",
+    "pyproj",
+    "scipy>=1.10.1",
+    "pointCollection @git+https://github.com/SmithB/pointCollection.git",
+]
+
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.urls]
+Repository = "https://github.com/SmithB/ATL06_xovers"
+Issues = "https://github.com/SmithB/ATL06_xovers/issues"
+
+[project.optional-dependencies]
+dev = ["flake8", "pytest>=4.6", "pytest-cov"]
