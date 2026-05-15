@@ -9,8 +9,7 @@ import pandas as pd
 import numpy as np
 import argparse
 
-from read_xovers import read_xovers
-from filter_xovers import filter_xovers
+import  ATL06_xovers as A6x
 
 def collect_xovers(xover_glob, bin_size=100e3, DEM=None, min_h=0,
                         min_r = 0,max_r=2.5e6,
@@ -46,9 +45,9 @@ def collect_xovers(xover_glob, bin_size=100e3, DEM=None, min_h=0,
                     continue
             xys += [xy]
 
-            vv, mm, DD = read_xovers(file)
+            vv, mm, DD = A6x.read_xovers(file)
 
-            filter_xovers(vv, mm, DD, min_h=min_h)
+            A6x.filter_xovers(vv, mm, DD, min_h=min_h)
 
             v += [vv]
             if get_data:

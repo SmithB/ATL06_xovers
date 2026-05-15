@@ -1,2 +1,4 @@
 -e ../pointCollection
 -e .
+pandas
+numpy

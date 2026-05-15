@@ -6,6 +6,6 @@ To setup this repo, you can install the libraries needed for the notebooks by cl
 To to this, run these commands in the ATL06_xovers directory:
 
  >> pushd ..; [ -d pointCollection ] || git clone https://github.com/SmithB/pointCollection.git; popd
- >> pip install -m requirements.txt
+ >> pip install -r requirements.txt
 
 
