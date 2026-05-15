@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64", "setuptools_scm>=8"]
+requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -27,7 +27,7 @@ dependencies = [
     "numpy",
     "pyproj",
     "scipy>=1.10.1",
-    "pointCollection @git+https://github.com/SmithB/pointCollection.git",
+    "pointCollection",
 ]
 
 classifiers=[
@@ -52,3 +52,6 @@ Issues = "https://github.com/SmithB/ATL06_xovers/issues"
 
 [project.optional-dependencies]
 dev = ["flake8", "pytest>=4.6", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+include = ["ATL06_xovers*"]
